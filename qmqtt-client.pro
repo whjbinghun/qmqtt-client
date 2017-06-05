@@ -13,11 +13,11 @@ CONFIG += c++11
 TARGET = qmqtt-client
 TEMPLATE = app
 
-DEPENDPATH += . ../qmqtt
-INCLUDEPATH +=  ../qmqtt
+DEPENDPATH += $$PWD/.
+INCLUDEPATH += $$PWD/.
 
 #NOTICE: add DYLD_LIBRARY_PATH to build environment.
-LIBS+=  -L../qmqtt-build-debug -lqmqtt
+LIBS+=  -L$$PWD/./ -lqmqtt #-L../qmqtt-build-debug -lqmqtt
 
 SOURCES += main.cpp \
     mainwindow.cpp \
